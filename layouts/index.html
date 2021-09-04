@@ -2,12 +2,13 @@
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
-      <h1 class="mt-0">{{ .Title }}</h1>
+      <h1 class="mt-0">Invidious</h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "docs/prologue/introduction/" | relURL }}" role="button">Get started</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "https://raw.githubusercontent.com/h-enk/doks/master/package.json" }}{{ $data.version }}</a></p>
+      <p class="lead">Invidious is an alternative front-end to YouTube </p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "https://instances.invidious.io/" | relURL }}" role="button">Using Invidious</a>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "https://docs.invidious.io/Installation.md" | relURL }}" role="button">Hosting Invidious</a>
+      <p class="meta">Open-source AGPL-V3 Licensed. <a href="https://github.com/iv-org/invidious">GitHub</a></p>
     </div>
   </div>
 </section>
@@ -18,30 +19,38 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Security aware</h2>
-        <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks-child-theme.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
+        <h2 class="h4">Data import/export</h2>
+        <p>
+          <li>Import subscriptions from YouTube, NewPipe and Freetube
+          <li>Import watch history from NewPipe
+          <li>Export subscriptions to NewPipe and Freetube
+          <li>Import/Export Invidious user data
+        </p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Fast by default ⚡️</h2>
-        <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=7731347bb8ce999eff7428a8e763b637">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
+        <h2 class="h4">User features</h2>
+        <p>
+          <li>Lightweight
+          <li>No ads
+          <li>No tracking
+          <li>No JavaScript required
+          <li>Light/Dark themes
+          <li>Customizable homepage
+          <li>Subscriptions independant from Google
+          <li>Notifications for all subscribed channels
+          <li>Audio-only mode (with background play on mobile)
+          <li>Support for Reddit comments
+          <li>Available in many languages, thanks to our translators
+        </p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">SEO-ready</h2>
-        <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
-      </div>
-    </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-5">
-        <h2 class="h4">Full text search</h2>
-        <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">Page layouts</h2>
-        <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">Dark mode</h2>
-        <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+        <h2 class="h4">Technical features</h2>
+        <p>
+          <li>Embedded video support
+          <li>Developer API
+          <li>Does not use official YouTube APIs
+          <li>No Contributor License Agreement (CLA)
+        </p>
       </div>
     </div>
   </div>

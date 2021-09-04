@@ -31,3 +31,8 @@
 #   name = "Privacy"
 #   url = "/privacy-policy/"
 #   weight = 10
+
+[[footer]]
+  name = "Website Source Code"
+  url = "https://github.com/iv-org/invidious.io"
+  weight = 10

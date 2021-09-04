@@ -15,10 +15,10 @@
   url = "https://docs.invidious.io/"
   weight = 10
 
-[[main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 20
+#[[main]]
+#  name = "Blog"
+#  url = "/blog/"
+#  weight = 20
 
 [[social]]
   name = "GitHub"

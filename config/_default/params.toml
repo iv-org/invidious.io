@@ -21,7 +21,7 @@ lqipWidth = "20x"
 
 # Footer
 footer = "Powered by <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>. Illustrations by <a href=\"https://undraw.co/\">unDraw</a>."
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+copyRight = ""
 
 # Edit Page
 docsRepo = "https://github.com/iv-org/invidious.io"

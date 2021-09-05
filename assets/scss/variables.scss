@@ -1,0 +1,5 @@
+// Same hue as hsl(195, 100%, 47%) (#00b6f0) or the invidious accent color,
+// but modified with different lightness and saturation for better readability
+// with black text.
+$invidious:  hsl(195, 85%, 65%);
+$primary: $invidious;

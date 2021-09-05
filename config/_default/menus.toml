@@ -1,18 +1,24 @@
 [[docs]]
-  name = "Prologue"
+  name = "General"
   weight = 10
-  identifier = "prologue"
-  url = "https://docs.invidious.io/"
+  identifier = "general"
+  url = "/docs/general/"
 
 [[docs]]
-  name = "Help"
-  weight = 60
-  identifier = "help"
-  url = "https://docs.invidious.io/"
+  name = "For Administrators"
+  weight = 10
+  identifier = "for-administrators"
+  url = "/docs/for-administrators/"
+
+[[docs]]
+  name = "For Developers"
+  weight = 10
+  identifier = "for-developers"
+  url = "/docs/for-developers/"
 
 [[main]]
   name = "Documentation"
-  url = "https://docs.invidious.io/"
+  url = "/docs/general/faq/"
   weight = 10
 
 #[[main]]

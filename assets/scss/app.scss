@@ -1,0 +1,41 @@
+// Mostly taken from doks's own app scss. The only addition would be
+// the `@import "variables" in order to overwrite color settings.
+
+
+/** Import Bootstrap functions */
+@import "bootstrap/scss/functions";
+
+/** Import theme variables */
+@import "../../node_modules/@hyas/doks/assets/scss/common/variables";
+
+/** Overwrite variables */
+@import "variables";
+
+/** Import Bootstrap */
+@import "bootstrap/scss/bootstrap";
+
+/** Import highlight.js */
+// @import "highlight.js/scss/github-dark-dimmed";
+
+/** Import KaTeX */
+@import "katex/dist/katex";
+
+/** Import theme styles */
+@import "../../node_modules/@hyas/doks/assets/scss/common/fonts";
+@import "../../node_modules/@hyas/doks/assets/scss/common/global";
+@import "../../node_modules/@hyas/doks/assets/scss/common/dark";
+@import "../../node_modules/@hyas/doks/assets/scss/components/alerts";
+@import "../../node_modules/@hyas/doks/assets/scss/components/buttons";
+@import "../../node_modules/@hyas/doks/assets/scss/components/code";
+@import "../../node_modules/@hyas/doks/assets/scss/components/syntax";
+@import "../../node_modules/@hyas/doks/assets/scss/components/comments";
+@import "../../node_modules/@hyas/doks/assets/scss/components/forms";
+@import "../../node_modules/@hyas/doks/assets/scss/components/images";
+@import "../../node_modules/@hyas/doks/assets/scss/components/mermaid";
+@import "../../node_modules/@hyas/doks/assets/scss/components/search";
+@import "../../node_modules/@hyas/doks/assets/scss/components/tables";
+@import "../../node_modules/@hyas/doks/assets/scss/layouts/footer";
+@import "../../node_modules/@hyas/doks/assets/scss/layouts/header";
+@import "../../node_modules/@hyas/doks/assets/scss/layouts/pages";
+@import "../../node_modules/@hyas/doks/assets/scss/layouts/posts";
+@import "../../node_modules/@hyas/doks/assets/scss/layouts/sidebar";

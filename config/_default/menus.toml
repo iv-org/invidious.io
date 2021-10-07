@@ -1,24 +1,6 @@
-[[docs]]
-  name = "General"
-  weight = 10
-  identifier = "general"
-  url = "/docs/general/"
-
-[[docs]]
-  name = "For Administrators"
-  weight = 10
-  identifier = "for-administrators"
-  url = "/docs/for-administrators/"
-
-[[docs]]
-  name = "For Developers"
-  weight = 10
-  identifier = "for-developers"
-  url = "/docs/for-developers/"
-
 [[main]]
   name = "Documentation"
-  url = "/docs/general/faq/"
+  url = "https://docs.invidious.io/"
   weight = 10
 
 #[[main]]

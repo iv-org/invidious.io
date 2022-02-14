@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://invidious.io/sitemap.xml

@@ -54,7 +54,7 @@
     "markdownlint-cli": "^0.28",
     "mermaid": "^8.11",
     "postcss": "^8.3",
-    "postcss-cli": "^8.3",
+    "postcss-cli": "^9.1",
     "purgecss-whitelister": "^2.4",
     "shx": "^0.3.3",
     "stylelint": "^13.13",

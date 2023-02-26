@@ -1,157 +1,349 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<link rel=stylesheet href=css/main.css>
-<style>img.lazyload{display:none}</style>
-<meta name=robots content="index, follow">
-<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Invidious - An open source alternative front-end to YouTube</title>
-<meta name=description content="Invidious is an open source alternative front-end to YouTube.">
-<link rel=canonical href=/>
-<meta property="og:locale" content>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Invidious">
-<meta property="og:description" content="Invidious is an open source alternative front-end to YouTube.">
-<meta property="og:url" content="/">
-<meta property="og:site_name" content="Invidious">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:site content>
-<meta name=twitter:creator content>
-<meta name=twitter:title content="Invidious">
-<meta name=twitter:description content="Invidious is an open source alternative front-end to YouTube.">
-<meta name=twitter:card content="summary">
-<meta name=twitter:image:alt content="Invidious">
-<meta name=theme-color content="#fff">
-<link rel=apple-touch-icon sizes=180x180 href=https://invidious.io/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://invidious.io/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=https://invidious.io/favicon-16x16.png>
-</head>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <link rel=stylesheet href=css/main.css>
+    <style>
+      img.lazyload {
+        display: none;
+      }
+    </style>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="googlebot"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta
+      name="bingbot"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <title>Invidious - An open source alternative front-end to YouTube</title>
+    <meta
+      name="description"
+      content="Invidious is an open source alternative front-end to YouTube."
+    />
+    <link rel=canonical href=/>
+    <meta property="og:locale" content />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Invidious" />
+    <meta
+      property="og:description"
+      content="Invidious is an open source alternative front-end to YouTube."
+    />
+    <meta property="og:url" content="/" />
+    <meta property="og:site_name" content="Invidious" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content />
+    <meta name="twitter:creator" content />
+    <meta name="twitter:title" content="Invidious" />
+    <meta
+      name="twitter:description"
+      content="Invidious is an open source alternative front-end to YouTube."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image:alt" content="Invidious" />
+    <meta name="theme-color" content="#fff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://invidious.io/apple-touch-icon.png"
+    />
+    <link rel=icon type=image/png sizes=32x32
+    href="https://invidious.io/favicon-32x32.png"> <link rel=icon type=image/png
+    sizes=16x16 href="https://invidious.io/favicon-16x16.png">
+  </head>
 
-<body class="home">
-<div class="header-bar fixed-top"></div>
-<header class="navbar fixed-top navbar-expand-md navbar-light">
-<div class=container>
-<input class="menu-btn order-0" type=checkbox id=menu-btn>
-<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
-<a class="navbar-brand order-1 order-md-0 me-auto" href=/>Invidious</a>
-<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
-<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
-<span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
-</button>
-<ul class="navbar-nav social-nav order-3 order-md-5">
-<li class=nav-item>
-<a class=nav-link href=https://github.com/iv-org><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
-</li>
-</ul>
-<div class="collapse navbar-collapse order-4 order-md-1">
-<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class=nav-item>
-<a class=nav-link href=https://docs.invidious.io/>Documentation</a>
-</li>
-<li class="nav-item">
-<a class=nav-link href=https://invidious.io/team/>Team</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://github.com/iv-org/invidious#contribute>Contribute</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://invidious.io/donate/>Donate</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://invidious.io/contact/>Contact</a>
-</li>
-</ul>
-</div>
-</header>
-<div class="wrap container" role=document>
-<div class=content>
-<section class="section container-fluid mt-n3 pb-3">
-<div class="row justify-content-center">
-<div class="col-lg-12 text-center">
-<h1><img src=invidious-colored-vector.svg width=192 height=192 alt="Invidious logo"></h1>
-<h1 class=mt-0>Invidious</h1>
-</div>
-<div class="col-lg-9 col-xl-8 text-center">
-<p class=lead>Invidious is an open source alternative front-end to YouTube.</p>
-<a class="btn btn-primary btn-lg px-4 mb-2" href=https://instances.invidious.io/ role=button>Use Invidious</a>
-<a class="btn btn-primary btn-lg px-4 mb-2" href=https://docs.invidious.io/installation/ role=button>Host Invidious</a>
-<p class=meta>Invidious is <a href=https://github.com/iv-org/invidious>Free (Libre) and Open Source software</a> licensed under the <a href=https://www.gnu.org/licenses/agpl-3.0.en.html>AGPL-3.0</a>.</p>
-<h5 class=mt-0>Chat with us:</h5>
-<a href=https://matrix.to/#/#invidious:matrix.org><img alt=Matrix src="https://img.shields.io/matrix/invidious:matrix.org?label=Matrix&color=darkgreen"></a>
-<a href="https://web.libera.chat/?channel=#invidious"><img alt="Libera.chat (IRC)" src=https://img.shields.io/badge/IRC%20%28Libera.chat%29-%23invidious-darkgreen></a>
-<br>
-<a rel="me" href="https://social.tchncs.de/@invidious"><img alt="Fediverse: @invidious@social.tchncs.de" src="https://img.shields.io/badge/Fediverse-%40invidious%40social.tchncs.de-darkgreen"></a>
-<br> <br>
-</div>
-</div>
-</section>
-</div>
-</div>
-<hr>
-<section class="section section-sm">
-<div class=container>
-<div class="row justify-content-center text-center">
-<div class=col-lg-5>
-<img src=images/undraw_privacy_protection_nlwy.svg alt="Visual illustration from undraw" height=250 width=350/>
-<h2 class=h4>Privacy focused</h2>
-<p>Invidious protects you from the prying eyes of Google. It won't track you either!</p>
-</div>
-<div class=col-lg-5>
-<img src=images/undraw_design_inspiration_fmjm.svg alt="Visual illustration from undraw" height=250 width=350/>
-<h2 class=h4>Ethically designed</h2>
-<p>Invidious helps you regain focus through a humane-design — no more shall your day be wasted away!</p>
-</div>
-<div class=col-lg-5>
-<img src=images/undraw_subscriptions_re_k7jj.svg alt="Visual illustration from undraw" height=250 width=350/>
-<h2 class=h4>Accounts</h2>
-<p>Invidious allows you to subscribe to channels and create playlists, without needing a YouTube account.</p>
-</div>
-</div>
-</div>
-<br> <br>
-<div class=container>
-<div class="row justify-content-center text-center">
-<div class=col-lg-5>
-<img src=images/undraw_Around_the_world_re_n353.svg alt="Visual illustration from undraw" height=250 width=350/>
-<h2 class=h4>Multilingual</h2>
-<p>Thanks to our <a href=https://hosted.weblate.org/engage/invidious/>translators</a>, Invidious is available in many different languages.</p>
-</div>
-<div class=col-lg-5>
-<img src=images/undraw_Placeholders_re_pvr4.svg alt="Visual illustration from undraw" height=250 width=350/>
-<h2 class=h4>No Ads</h2>
-<p>Invidious allows you to watch videos without being disturbed by annoying ads. Also 100% supported by <a href=https://sponsor.ajay.app/>Sponsorblock</a></p>
-</div>
-<div class=col-lg-5>
-<img src=images/undraw_Coding_re_iv62.svg alt="Visual illustration from undraw" height=250 width=350/>
-<h2 class=h4>Developer API</h2>
-<p>Invidious has a <a href=https://docs.invidious.io/api/>fully featured and documented REST API</a> for developers.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="section section-sm container-fluid">
-<div class="row justify-content-center text-center">
-<div class=col-lg-9></div>
-</div>
-</section>
-<footer class="footer text-muted">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 order-last order-lg-first">
-<ul class=list-inline>
-<li class=list-inline-item>Based on <a href=https://getdoks.org/>Doks</a>. Illustrations by <a href=https://undraw.co/>unDraw</a>.</li>
-</ul>
-</div>
-<div class="col-lg-8 order-first order-lg-last text-lg-end">
-<ul class=list-inline>
-<li class=list-inline-item><a href=https://github.com/iv-org/invidious.io>Website Source Code</a></li>
-</ul>
-</div>
-</div>
-</div>
-</footer>
-<script src=js/main.js></script>
-</body>
+  <body class="home">
+    <div class="header-bar fixed-top"></div>
+    <header class="navbar fixed-top navbar-expand-md navbar-light">
+      <div class="container">
+        <input class="menu-btn order-0" type="checkbox" id="menu-btn" />
+        <label class="menu-icon d-md-none" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <a
+          class="navbar-brand order-1 order-md-0 me-auto"
+          href="https://invidious.io/"
+          >Invidious</a
+        >
+        <button
+          id="mode"
+          class="btn btn-link order-2 order-md-4"
+          type="button"
+          aria-label="Toggle mode"
+        >
+          <span class="toggle-dark"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentcolor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-moon"
+            >
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg
+          ></span>
+          <span class="toggle-light"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentcolor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-sun"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg
+          ></span>
+        </button>
+        <ul class="navbar-nav social-nav order-3 order-md-5">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/iv-org">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentcolor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-github"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"
+                />
+              </svg>
+              <span class="ms-2 visually-hidden">GitHub</span>
+            </a>
+          </li>
+        </ul>
+        <div class="collapse navbar-collapse order-4 order-md-1">
+          <ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+            <li class="nav-item">
+              <a class="nav-link" href="https://docs.invidious.io/"
+                >Documentation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://invidious.io/team/">Team</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/iv-org/invidious#contribute"
+                >Contribute</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://invidious.io/donate/">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://invidious.io/contact/"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="wrap container" role="document">
+      <div class="content">
+        <section class="section container-fluid mt-n3 pb-3">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+              <h1>
+                <img
+                  src="invidious-colored-vector.svg"
+                  width="192"
+                  height="192"
+                  alt="Invidious logo"
+                />
+              </h1>
+              <h1 class="mt-0">Invidious</h1>
+            </div>
+            <div class="col-lg-9 col-xl-8 text-center">
+              <p class="lead">
+                Invidious is an open source alternative front-end to YouTube.
+              </p>
+              <a
+                class="btn btn-primary btn-lg px-4 mb-2"
+                href="https://instances.invidious.io/"
+                role="button"
+                >Use Invidious</a
+              >
+              <a
+                class="btn btn-primary btn-lg px-4 mb-2"
+                href="https://docs.invidious.io/installation/"
+                role="button"
+                >Host Invidious</a
+              >
+              <p class="meta">
+                Invidious is
+                <a href="https://github.com/iv-org/invidious"
+                  >Free (Libre) and Open Source software</a
+                >
+                licensed under the
+                <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"
+                  >AGPL-3.0</a
+                >.
+              </p>
+              <h5 class="mt-0">Chat with us:</h5>
+              <a href="https://matrix.to/#/#invidious:matrix.org"
+                ><img
+                  alt="Matrix"
+                  src="https://img.shields.io/matrix/invidious:matrix.org?label=Matrix&color=darkgreen"
+              /></a>
+              <a href="https://web.libera.chat/?channel=#invidious"
+                ><img
+                  alt="Libera.chat (IRC)"
+                  src="https://img.shields.io/badge/IRC%20%28Libera.chat%29-%23invidious-darkgreen"
+              /></a>
+              <br />
+              <a rel="me" href="https://social.tchncs.de/@invidious"
+                ><img
+                  alt="Fediverse: @invidious@social.tchncs.de"
+                  src="https://img.shields.io/badge/Fediverse-%40invidious%40social.tchncs.de-darkgreen"
+              /></a>
+              <br />
+              <br />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <hr />
+    <section class="section section-sm">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-5">
+            <img src=images/undraw_privacy_protection_nlwy.svg alt="Visual
+            illustration from undraw" height=250 width=350/>
+            <h2 class="h4">Privacy focused</h2>
+            <p>
+              Invidious protects you from the prying eyes of Google. It won't
+              track you either!
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <img src=images/undraw_design_inspiration_fmjm.svg alt="Visual
+            illustration from undraw" height=250 width=350/>
+            <h2 class="h4">Ethically designed</h2>
+            <p>
+              Invidious helps you regain focus through a humane-design — no more
+              shall your day be wasted away!
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <img src=images/undraw_subscriptions_re_k7jj.svg alt="Visual
+            illustration from undraw" height=250 width=350/>
+            <h2 class="h4">Accounts</h2>
+            <p>
+              Invidious allows you to subscribe to channels and create
+              playlists, without needing a YouTube account.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-5">
+            <img
+              src="images/undraw_Around_the_world_re_n353.svg"
+              alt="Visual illustration from undraw"
+              height="250"
+              width="350"
+            />
+            <h2 class="h4">Multilingual</h2>
+            <p>
+              Thanks to our
+              <a href="https://hosted.weblate.org/engage/invidious/"
+                >translators</a
+              >, Invidious is available in many different languages.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <img
+              src="images/undraw_Placeholders_re_pvr4.svg"
+              alt="Visual illustration from undraw"
+              height="250"
+              width="350"
+            />
+            <h2 class="h4">No Ads</h2>
+            <p>
+              Invidious allows you to watch videos without being disturbed by
+              annoying ads. Also 100% supported by
+              <a href="https://sponsor.ajay.app/">Sponsorblock</a>
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <img
+              src="images/undraw_Coding_re_iv62.svg"
+              alt="Visual illustration from undraw"
+              height="250"
+              width="350"
+            />
+            <h2 class="h4">Developer API</h2>
+            <p>
+              Invidious has a
+              <a href="https://docs.invidious.io/api/">fully featured and documented REST API</a>
+              for developers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-sm container-fluid">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9"></div>
+      </div>
+    </section>
+    <footer class="footer text-muted">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 order-last order-lg-first">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                Based on <a href="https://getdoks.org/">Doks</a>. Illustrations
+                by <a href="https://undraw.co/">unDraw</a>.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-8 order-first order-lg-last text-lg-end">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://github.com/iv-org/invidious.io"
+                  >Website Source Code</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
